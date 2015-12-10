@@ -69,9 +69,9 @@ Sort -t $',' -k2,2n -k4,4n -k5,5n ROUTE_TERMINAL_LOCATION_TMP_NEW.csv > ROUTE_TE
 
 然后，利用 extract_all_bus_stop_coordinates.py 提取各条线路（分方向）的公交站台位置，具体采用了DBSCAN点聚类算法，根据数据集10中各条线路和方向上匹配上车点数量，分为三种情形设置DBSCAN的参数： 距离 e 和 最小点数 m
 
--- 点数 <= 300: e = 20, m = 2
--- 300 < 点数 <= 1000: e = 15, m = 3
--- 点数 > 1000: e = 10, m = 4
+-- 点数 <= 300: e = 20, m = 2;
+-- 300 < 点数 <= 1000: e = 15, m = 3;
+-- 点数 > 1000: e = 10, m = 4;
 
 以上，task 1处理完毕。
 
